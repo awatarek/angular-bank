@@ -1,0 +1,61 @@
+<div class="landing-navbar-content">
+    <div class="landing-navbar-logo">
+        <img src="assets/logo.png" alt="">
+    </div>
+
+    <div class="landing-navbar-type">
+        <a class="landing-navbar-text hover-animation" [routerLink]="['/individual']" [ngClass]="isTopRouterActive('individual')">
+            Personal
+        </a>
+        <a class="landing-navbar-text hover-animation" [routerLink]="['/business']" [ngClass]="isTopRouterActive('business')">
+            Business
+        </a>
+    </div>
+    <div class="landing-navbar-individual-content" *ngIf="individual">
+        <a class="landing-navbar-text" [routerLink]="['/individual/checking']" [ngClass]="isLowerRouterActive('/individual/checking')">
+            Checking
+        </a>
+        <a class="landing-navbar-text" [routerLink]="['/individual/savings']" [ngClass]="isLowerRouterActive('/individual/savings')">
+            Savings
+        </a>
+        <a class="landing-navbar-text" [routerLink]="['/individual/loans']" [ngClass]="isLowerRouterActive('/individual/loans')">
+            Loans
+        </a>
+        <a class="landing-navbar-text" [routerLink]="['/individual/investing']" [ngClass]="isLowerRouterActive('/individual/investing')">
+            Investing
+        </a>
+    </div>
+    <div class="landing-navbar-individual-content" *ngIf="!individual">
+        <a class="landing-navbar-text" [routerLink]="['/business/checking']" [ngClass]="isLowerRouterActive('/business/checking')">
+            Checking
+        </a>
+        <a class="landing-navbar-text" [routerLink]="['/business/loans']" [ngClass]="isLowerRouterActive('/business/loans')">
+            Loans
+        </a>
+        <a class="landing-navbar-text" [routerLink]="['/business/leasing']" [ngClass]="isLowerRouterActive('/business/leasing')">
+            Leasing
+        </a>
+        <a class="landing-navbar-text" [routerLink]="['/business/bookkeeping']" [ngClass]="isLowerRouterActive('/business/bookkeeping')">
+            Bookkeeping
+        </a>
+    </div>
+    <div class="landing-navbar-login">
+        <a class="landing-navbar-text" [routerLink]="['/login']">
+            Sign in
+        </a>
+    </div>
+</div>
+
+<div class="landing-navbar-content-mobile">
+    <div class="landing-navbar-logo">
+        <img src="assets/logo.png" alt="">
+    </div>
+
+    <div></div>
+
+    <div class="landing-navbar-login">
+        <a class="landing-navbar-text" [routerLink]="['/login']">
+            Sign in
+        </a>
+    </div>
+</div>
