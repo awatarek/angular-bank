@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-landing-navbar',
@@ -8,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class LandingNavbarComponent {
   public individual: boolean = true;
+  public individualObs = new Subject<boolean>();
+  public display: boolean = false;
 
   constructor(private router: Router) {
 
@@ -35,11 +38,13 @@ export class LandingNavbarComponent {
   }
 
   public isIndividual(){
-    if(this.router.url == "" || this.router.url.split("/")[1] == "individual"){
-      this.individual = true;
-    } else {
-      this.individual = false;
-    }
+    this.router.url == "" || this.router.url.split("/")[1] == "individual" ?
+      this.individualObs.next(true) : 
+      this.individualObs.next(false);
+  }
+
+  ngOnDestroy(){
+    this.individualObs.unsubscribe();
   }
 
 }
