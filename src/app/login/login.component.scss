@@ -1,0 +1,119 @@
+.page{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#animated-background{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+
+.login-form{
+    position: absolute;
+
+    left: calc(50% - 210px);
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    width: 420px;
+    height: 700px;
+    display: block;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #fefef8;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);
+    box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);
+
+    .section-hero{
+        text-align: center;
+    }
+
+    img{
+        max-height: 150px;
+        margin: 15px auto;
+        padding: 20px;
+        display: block;
+    }
+
+    button{
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+
+        min-width: 150px;
+        width: 50%;
+
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-radius: 15px;
+        border: 0px;
+
+        color: white;
+        background-color: #1bbb9b;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover{
+            -webkit-box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);
+            -moz-box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);
+            box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);    
+        }
+    }
+
+    input{
+        display: block;
+        min-width: 300px;
+        width: 85%;
+        height: 60px;
+        margin: 25px auto;
+        padding: 15px;
+        font-size: 20px;
+        border-radius: 24px;
+
+        &[name="password"]{
+            margin: 5px auto;
+        }
+
+        &:active, &:hover, &:focus{
+            border: 1px solid #15836D;
+        }
+
+        &:focus{
+            border: 1px solid #15836D;
+            -webkit-box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);
+            -moz-box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);
+            box-shadow: 0px 0px 8px 0px rgba(21, 131, 109, 1);
+        }
+    }
+
+    input+span.password-help{
+        display: block;
+        text-align: right;
+        margin-right: 10%;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+}
+
+
+
+.new-user{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    span{
+        color: #15836D;
+        font-weight: 600;
+        cursor: pointer;
+
+    }
+}
+
