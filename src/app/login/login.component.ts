@@ -6,7 +6,7 @@ import { ParticlesConfig } from './particles-config';
 declare let particlesJS: any; 
 
 @Component({
-  selector: 'app-login',
+  selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })

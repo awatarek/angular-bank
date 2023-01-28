@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BehaviorSubject, Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-landing-navbar',
+  selector: 'landing-navbar',
   templateUrl: './landing-navbar.component.html',
   styleUrls: ['./landing-navbar.component.scss', './landing-navbar-mobile.component.scss']
 })
@@ -13,7 +13,7 @@ export class LandingNavbarComponent {
   public display: boolean = false;
 
   constructor(private router: Router) {
-
+    console.log(window.navigator.userAgent)
   }
 
   public isTopRouterActive(router: string): string{

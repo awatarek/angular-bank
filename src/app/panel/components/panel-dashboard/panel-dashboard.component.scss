@@ -1,0 +1,17 @@
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    .main-info{
+        margin: 30px auto;
+        width: 350px;
+        border: 1px solid black;
+    }
+
+    .transaction-history{
+        margin: 30px auto;
+        width: 350px;
+    }
+
+}

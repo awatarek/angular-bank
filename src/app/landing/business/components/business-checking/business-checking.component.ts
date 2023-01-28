@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-business-checking',
+  selector: 'business-checking',
   templateUrl: './business-checking.component.html',
   styleUrls: ['./business-checking.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-individual-landing',
+  selector: 'individual-landing',
   templateUrl: './individual-landing.component.html',
   styleUrls: ['./individual-landing.component.scss']
 })
