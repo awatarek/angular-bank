@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { AuthService } from '../shared/service/auth.service';
 import { ParticlesConfig } from './particles-config';
 
 declare let particlesJS: any; 
@@ -11,16 +12,6 @@ declare let particlesJS: any;
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public section = 0;
-
-  public form: FormGroup = new FormGroup({
-    login: new FormControl(""),
-    password: new FormControl(""),
-    mail: new FormControl("")
-  });
-
-  constructor(private router: Router) { }
-
   public ngOnInit(): void {
     this.invokeParticles();
   }
@@ -28,17 +19,4 @@ export class LoginComponent implements OnInit {
   public invokeParticles(): void {
     particlesJS('animated-background', ParticlesConfig, function() {});
   }
-
-  public login(){
-    this.router.navigate(["/panel"]);
-  }
-
-  public register(){
-    this.router.navigate(["/panel"]);
-  }
-
-  public passwordRecovery(){
-    
-  }
-
 }

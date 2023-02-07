@@ -5,6 +5,9 @@ import { PanelNavbarComponent } from './components/panel-navbar/panel-navbar.com
 import { RouterModule } from '@angular/router';
 import { PanelRouter } from './panel-routing.router';
 import { PanelDashboardComponent } from './components/panel-dashboard/panel-dashboard.component';
+import { SharedModule } from '../shared/shared.module';
+import { CookieGuardService } from '../shared/guards/cookie.guard';
+import { AuthService } from '../shared/service/auth.service';
 
 
 
@@ -12,11 +15,16 @@ import { PanelDashboardComponent } from './components/panel-dashboard/panel-dash
   declarations: [
     PanelComponent,
     PanelNavbarComponent,
-    PanelDashboardComponent
+    PanelDashboardComponent,
+    
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(PanelRouter)
+    RouterModule.forChild(PanelRouter),
+  ],
+  providers: [
+    CookieGuardService,
+    AuthService
   ]
 })
 export class PanelModule { }

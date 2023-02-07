@@ -1,0 +1,26 @@
+<div class="login-form">
+    <h2 class="section-hero">Login</h2>
+    <form [formGroup]="formLogin" (ngSubmit)="login()">
+        <div class="input-wrapper">
+            <input type="text" name="login" pInputText placeholder="Login" formControlName="username">
+            <p class="controller-error" *ngIf="isControllValid('username', 'required')">This field is required</p>
+            <p class="controller-error" *ngIf="isControllValid('username', 'minlength')">Your login need to be at least 3 symbols long</p>
+        </div>
+        <div class="input-wrapper">
+            <input type="password" name="password" pInputText placeholder="Password" formControlName="password">
+            <p class="controller-error" *ngIf="isControllValid('password', 'required')">This field is required</p>
+            <p class="controller-error" *ngIf="isControllValid('password', 'minlength')">Your login need to be at least 6 symbols long</p>
+        </div>
+
+        <span class="password-help" (click)="navigateTo('login/password-reset')">Forgot Password?</span>
+
+        <button type="submit">Login</button>
+        <p class="controller-error">{{isError ? 'Something went wrong! Check your login and password!' : ''}}</p>
+    </form>
+
+
+    <p class="new-user">
+        Don't have account? 
+        <span (click)="navigateTo('login/register')">Register</span>
+    </p>
+</div>
