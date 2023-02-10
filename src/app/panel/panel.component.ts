@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountsService } from '../shared/service/accounts.service';
 
 @Component({
   selector: 'panel',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private account: AccountsService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    if(!this.account.hasAccount()){
+      
+    }
   }
 
 }

@@ -26,7 +26,7 @@ export class PasswordResetComponent {
   }
 
 
-  public isControllValid(groupEnum: number, controlName: string, validaorName: string): boolean{
+  public isControllValid(controlName: string, validaorName: string): boolean{
     let form: FormGroup = null;
     form = this.formPass;
 

@@ -9,7 +9,7 @@ import { LoginComponent } from './login.component';
 export let LoginRouter: Routes = [
     {path: '', canActivate: [NeedLoginGuardService], component: LoginComponent, children:
         [
-            {path: 'password-verification/:uid', component: PasswordResetLinkComponent},
+            {path: 'password-reset-link/:ruid', component: PasswordResetLinkComponent},
             {path: 'password-reset', component: PasswordResetComponent},
             {path: 'register', component: AccountRegisterComponent},
             {path: '', component: AccountLoginComponent}

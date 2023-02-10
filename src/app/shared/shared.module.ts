@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthService } from './service/auth.service';
 import { CookieGuardService } from './guards/cookie.guard';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NeedLoginGuardService } from './guards/needLogin.guard';
+import { HasAccountGuardService } from './guards/hasAccount.guard';
+import { AccountsService } from './service/accounts.service';
 
 
 
@@ -15,7 +16,9 @@ import { NeedLoginGuardService } from './guards/needLogin.guard';
   providers: [
     AuthService,
     CookieGuardService,
-    NeedLoginGuardService
+    NeedLoginGuardService,
+    HasAccountGuardService,
+    AccountsService
   ]
 })
 export class SharedModule { }

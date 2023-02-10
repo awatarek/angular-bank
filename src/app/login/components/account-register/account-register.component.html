@@ -4,20 +4,20 @@
     <form [formGroup]="formReg" (ngSubmit)="register()">
         <div class="input-wrapper">
             <input type="text" name="login" pInputText placeholder="Login" formControlName="username">
-            <p class="controller-error" *ngIf="isControllValid(0, 'username', 'required')">This field is required</p>
-            <p class="controller-error" *ngIf="isControllValid(0, 'username', 'minlength')">Your login need to be at least 3 symbols long</p>
+            <p class="controller-error" *ngIf="isControllValid('username', 'required')">This field is required</p>
+            <p class="controller-error" *ngIf="isControllValid('username', 'minlength')">Your login need to be at least 3 symbols long</p>
         </div>
     
         <div class="input-wrapper">
             <input type="text" name="mail" pInputText placeholder="Mail" formControlName="mail">
-            <p class="controller-error" *ngIf="isControllValid(0, 'mail', 'required')">This field is required</p>
-            <p class="controller-error" *ngIf="isControllValid(0, 'mail', 'minlength')">Your login need to be at least 6 symbols long</p>
+            <p class="controller-error" *ngIf="isControllValid('mail', 'required')">This field is required</p>
+            <p class="controller-error" *ngIf="isControllValid('mail', 'minlength')">Your login need to be at least 6 symbols long</p>
         </div>
     
         <div class="input-wrapper">
             <input type="password" name="password" pInputText placeholder="Password" formControlName="password">
-            <p class="controller-error" *ngIf="isControllValid(0, 'password', 'required')">This field is required</p>
-            <p class="controller-error" *ngIf="isControllValid(0, 'password', 'minlength')">Your login need to be at least 6 symbols long</p>
+            <p class="controller-error" *ngIf="isControllValid('password', 'required')">This field is required</p>
+            <p class="controller-error" *ngIf="isControllValid('password', 'minlength')">Your login need to be at least 6 symbols long</p>
         </div>
     
         <button type="submit">Register</button>

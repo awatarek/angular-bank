@@ -28,5 +28,11 @@ export class AuthService {
         const response$ = this.http.post<number>(this.url+"passwordReset", {mail: mail});
         let response = await lastValueFrom(response$);
         return response == 200;
-      }
+    }
+
+    public async passwordResetConfirm(ruid: string, password: string): Promise<boolean> {
+        const response$ = this.http.post<number>(this.url+"passwordReset", {ruid: ruid, password: password});
+        let response = await lastValueFrom(response$);
+        return response == 200;
+    }
 }

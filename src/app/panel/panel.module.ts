@@ -8,6 +8,9 @@ import { PanelDashboardComponent } from './components/panel-dashboard/panel-dash
 import { SharedModule } from '../shared/shared.module';
 import { CookieGuardService } from '../shared/guards/cookie.guard';
 import { AuthService } from '../shared/service/auth.service';
+import { PanelNewAccountComponent } from './components/panel-new-account/panel-new-account.component';
+import { AccountsService } from '../shared/service/accounts.service';
+import { HasAccountGuardService } from '../shared/guards/hasAccount.guard';
 
 
 
@@ -16,7 +19,7 @@ import { AuthService } from '../shared/service/auth.service';
     PanelComponent,
     PanelNavbarComponent,
     PanelDashboardComponent,
-    
+    PanelNewAccountComponent,
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,9 @@ import { AuthService } from '../shared/service/auth.service';
   ],
   providers: [
     CookieGuardService,
-    AuthService
+    AuthService,
+    AccountsService,
+    HasAccountGuardService
   ]
 })
 export class PanelModule { }
